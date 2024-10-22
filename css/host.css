@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Encode+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@800&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Encode+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asul&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+
+:root {
+  --primary: #EFEFEF;
+  --secondary: #616163;
+  --tertiary: #E4572E;
+  --details: #154b55;
+  --extra: #594864fd;
+}
+
+::selection {
+  color: var(--primary);
+  background: var(--extra);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  height: 100%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-family: 'Caveat';
+  font-size: 26px;
+}
+
+h1, h2, h3, h4 {
+  color: var(--secondary);
+}
+
+nav {
+  position: relative;
+}
+
+p {
+  color: var(--secondary);
+}
+
+.contact-container {
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 2em;
+  font-family: 'Work Sans';
+}
+
+.contact-container h4 {
+  font-size: 36px;
+}
+
+.contact-container input, .contact-container textarea {
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--secondary);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-container input[type=submit] {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--tertiary);
+  color: var(--primary);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.contact-container input[type=submit]:hover {
+  background-color: var(--details);
+}
+
+.contact-container p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.contact-container textarea {
+  display: block;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 468px;
+  height: 150px;
+  resize: none;
+}
+
+.default-btn {
+  padding: 15px 20px;
+  background-color: var(--extra);
+  border-radius: 5%;
+  color: var(--primary);
+}
+
+.default-btn:hover {
+  background-color: var(--details);
+}
+
+.fa-comments {
+  color: var(--tertiary);
+}
+
+.fa-shuttle-space {
+  color: var(--details);
+}
+
+.fa-user-lock {
+  color: var(--extra);
+}
+
+.fas {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.loader {
+  position: relative;
+  width: 75px;
+  height: 100px;
+  display: flex;
+  margin-top: 20%;
+}
+
+.loader__ball {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--details);
+  border-radius: 50%;
+  animation: ball 4s infinite;
+}
+
+.loader__bar {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 50%;
+  background: var(--secondary);
+  transform-origin: center bottom;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.loader__bar:nth-child(1) {
+  left: 0px;
+  transform: scale(1, 0.2);
+  animation: barUp1 4s infinite;
+}
+
+.loader__bar:nth-child(2) {
+  left: 15px;
+  transform: scale(1, 0.4);
+  animation: barUp2 4s infinite;
+}
+
+.loader__bar:nth-child(3) {
+  left: 30px;
+  transform: scale(1, 0.6);
+  animation: barUp3 4s infinite;
+}
+
+.loader__bar:nth-child(4) {
+  left: 45px;
+  transform: scale(1, 0.8);
+  animation: barUp4 4s infinite;
+}
+
+.loader__bar:nth-child(5) {
+  left: 60px;
+  transform: scale(1, 1);
+  animation: barUp5 4s infinite;
+}
+
+.logo {
+  width: 50px;
+  margin-top: 15px;
+}
+
+.main-banner {
+  background-image: url('../Images/mainbanner.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 10em 0;
+ 
+}
+
+.main-banner h1, .main-banner p {
+  color: var(--primary);
+  text-align: center;
+  font-weight: bold;
+}
+
+.main-banner h1 {
+  font-size: 60px;
+  font-family: 'Righteous';
+}
+
+.main-banner p {
+  font-size: 45px;
+  font-family: 'Edu QLD Beginner';
+}
+
+.navbar-container {
+  width: 100%;
+  height: 80px;
+  background-color: var(--secondary);
+  padding: 0 2em;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.navbar-items {
+  list-style: none;
+  position: absolute;
+  display: inline-block;
+  height: 80px;
+  line-height: 80px;
+  margin: 0;
+  right: 0;
+}
+
+.navbar-items li {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-left: 25px;
+  font-family: 'Amatic SC';
+  font-size: 27px;
+}
+
+.navbar-items li a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: .5s;
+}
+
+.navbar-items li a:hover {
+  color: var(--tertiary);
+}
+
+.plan {
+  flex: 1 1 200px;
+  max-width: 275px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.plan li {
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.plan .plan-btn {
+  background-color: var(--extra);
+  color: var(--primary);
+  font-size: 24px;
+  height: 75px;
+  line-height: 75px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.plan .plan-btn:hover {
+  background-color: var(--details);
+}
+
+.plan .plan-name {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary);
+  background-color: var(--details);
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.plan .price {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--extra);
+  color: var(--primary);
+  text-align: center;
+  line-height: 120px;
+  font-size: 18px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -50px;
+}
+
+.plan .recommended {
+  background-color: var(--tertiary);
+}
+
+.plan ul {
+  padding: 0;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 90%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-container {
+  padding-bottom: 5em;
+  text-align: center;
+  font-family: 'Signika Negative';
+}
+
+.pricing-container h3 {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+.pricing-container p {
+  font-size: 20px;
+}
+
+.searchdomain-container {
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 5em 0;
+  font-family: 'Ubuntu';
+}
+
+.searchdomain-container h3 {
+  color: var(--primary);
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.searchdomain-container input {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 5px;
+}
+
+.searchdomain-container input[type=submit] {
+  background-color: var(--extra);
+  padding: 15px 30px;
+  color: var(--primary);
+  font-size: 24px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.searchdomain-container input[type=submit]:hover {
+  background-color: var(--details);
+}
+
+.searchdomain-container input[type=text] {
+  margin-bottom: 25px;
+  width: 60%;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.searchdomain-container p {
+  color: var(--details);
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.specialties-container {
+  padding: 5em 0;
+}
+
+.specialties-container ul {
+  display: flex;
+  width: 90%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+}
+
+.specialties-container ul li {
+  flex: 1 1 200px;
+  list-style: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.specialties-container ul li h2 {
+  margin-bottom: 25px;
+  font-family: 'Asul';
+}
+
+.specialties-container ul li p {
+  line-height: 24px;
+  font-family: 'Asul';
+}
+
+#container {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  #container .searchdomain-container input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-container input, .contact-container textarea {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  .navbar-items li {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .plan {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .searchdomain-container, .contact-container {
+    padding: 3em 2em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .plans-container, .specialties-container ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .plan {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .plans-container {
+    width: 95%;
+  }
+}

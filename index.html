@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="CSS/host.css">
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <script src="https://kit.fontawesome.com/cea4f864f2.js" crossorigin="anonymous"></script>
+ 
+  <title>hDC Host</title>
+</head>
+<body onload="loader()">
+  <div id="container">
+    <div class="navbar-container">
+      <nav>
+        <a href="#"><img class="logo" src="Images/hdchostlogo.png"></a>
+        <ul class="navbar-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#p">Planos</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="" target="_blank" class="default-btn">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <header>
+        <div class="main-banner">
+          <h1>hDC Host</h1>
+          <p>Os melhores planos para qualquer tipo de projeto!</p>
+        </div>
+      </header>
+
+      <section class="specialties-container">
+        <ul>
+          <li>
+            <i class="fas fa-user-lock"></i>
+            <h2>Segurança</h2>
+            <p>Utilizamos tecnologia de ponta para proteger suas informações. Nossos servidores são equipados com firewalls robustos e sistemas de detecção de intrusões, que monitoram continuamente possíveis ameaças e bloqueiam acessos não autorizados.</p>
+          </li>
+          <li>
+            <i class="fas fa-shuttle-space"></i>
+            <h2>Velocidade</h2>
+            <p>Nossos servidores são otimizados para oferecer velocidade superior. Utilizamos hardware de última geração e tecnologia SSD, que proporcionam tempos de resposta mais rápidos e uma experiência de navegação fluida para seus visitantes.</p>
+          </li>
+          <li>
+            <i class="fas fa-comments"></i>
+            <h2>Suporte</h2>
+            <p>Nosso time de suporte está sempre disponível para ajudar. Se você tiver qualquer dúvida ou preocupação relacionada à segurança, nossos especialistas estão prontos para fornecer orientações e soluções.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="pricing-container" id="plans">
+        <h3>Planos e Preços</h3>
+        <p>Selecione o plano perfeito para você</p>
+        <div class="plans-container">
+          <div class="plan">
+            <ul>
+              <li class="price">R$ 15/mês</li>
+              <li class="plan-name">Padrão</li>
+              <li>2GB de espaço em disco</li>
+              <li>10 subdomínios</li>
+              <li>25 contas de email</li>
+              <li>C-panel</li>
+              <li>Suporte 24/7</li>
+              <li class="plan-btn"><a href="" target="_blank" >Selecionar</a></li>
+            </ul>
+          </div>
+
+          <div class="plan">
+            <ul>
+              <li class="price">R$ 30/mês</li>
+              <li class="plan-name">Dedicado</li>
+              <li>5GB de espaço em disco</li>
+              <li>20 subdomínios</li>
+              <li>50 contas de email</li>
+              <li>C-panel</li>
+              <li>Suporte 24/7</li>
+              <li class="plan-btn"><a href="" target="_blank" >Selecionar</a></li>
+            </ul>
+          </div>
+
+          <div class="plan">
+            <ul>
+              <li class="price recommended">R$ 50/mês</li>
+              <li class="plan-name">Dedicado Plus</li>
+              <li>10GB de espaço em disco</li>
+              <li>100 subdomínios</li>
+              <li>100 contas de email</li>
+              <li>C-panel</li>
+              <li>Suporte 24/7</li>
+              <li class="plan-btn recommended">
+                <a href="" target="_blank" >Selecionar</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="plan">
+            <ul>
+              <li class="price">R$ 100/mês</li>
+              <li class="plan-name">Cloud</li>
+              <li>20GB de espaço em disco</li>
+              <li>200 subdomínios</li>
+              <li>200 contas de email</li>
+              <li>C-panel</li>
+              <li>Suporte 24/7</li>
+              <li class="plan-btn">
+                <a href="" target="_blank" >Selecionar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="searchdomain-container">
+        <h3>Buscar um domínio</h3>
+        <p>Veja se o domínio que você deseja está disponível</p>
+        <form>
+          <input type="text" name="domain" placeholder="digite o domínio desejado" />
+          <input type="submit" value="Buscar" />
+        </form>
+      </section>
+
+      <section class="contact-container" id="contact">
+        <h4>Entre em contato</h4>
+        <p>Mande uma mensagem para conversarmos sobre a melhor hospedagem para o seu negócio.</p>
+        <form>
+          <input type="text" name="name" placeholder="seu nome" />
+          <input type="email" name="email" placeholder="seu email" />
+          <textarea name="message" placeholder="digite sua mensagem"></textarea>
+          <input type="submit" value="Enviar" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p> wesley   @ 2024</p>
+    </footer>
+  </div>
+
+  <div class="loader">
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__ball"></div>
+  </div>
+
+  <script>
+    let time;
+
+    function loader() {
+      time = setTimeout(showPage, 1000);
+    }
+
+    function showPage() {
+      document.getElementsByClassName("loader")[0].style.display = "none";
+      document.getElementById("container").style.display = "block";
+    }
+
+    window.addEventListener('load', (event) => {
+      new cursoreffects.followingDotCursor();
+    });
+  </script>
+</body>
+</html>
